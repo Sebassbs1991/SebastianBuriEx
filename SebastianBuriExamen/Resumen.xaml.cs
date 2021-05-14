@@ -7,17 +7,27 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
+
+
 namespace SebastianBuriExamen
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Resumen : ContentPage
     {
-        public Resumen(string nombre, int monto, int pago)
+
+        
+        public Resumen(string nombre)
         {
             InitializeComponent();
+
+            
+            lblName.Text = nombre;
+  
+                      
+
         }
 
-       
-        
+
+
     }
 }

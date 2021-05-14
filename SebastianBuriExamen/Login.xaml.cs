@@ -38,8 +38,10 @@ namespace SebastianBuriExamen
             {
                 string usuario = txtUser.Text;
                 string clave = txtPass.Text;
+               
 
                 await Navigation.PushAsync(new Registro(usuario, clave));
+              
 
             }
             else

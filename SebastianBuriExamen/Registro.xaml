@@ -21,11 +21,13 @@
 
                 <StackLayout Grid.Row="1" Padding="30,20">
 
-                    <Label x:Name="lblUser" Text= "Usuario Conectado:" />
+                    <Label x:Name="lblUser"  TextColor="Black" />
 
                     <Entry x:Name="txtNombre" Placeholder="Ingrese Nombre" PlaceholderColor="Black" Opacity="0.3"/>
                     <Entry x:Name="txtMonto" Placeholder="Ingrese monto inicial" PlaceholderColor="Black" Opacity="0.3"/>
-                    <Entry x:Name="txtPago" Placeholder="Ingrese pago inicial" PlaceholderColor="Black" Opacity="0.3"/>
+
+
+                    <Entry Text="Pago Mensual"  x:Name="txtTotal" IsEnabled="False"/>
 
                     <Button x:Name="btnCalcular" Text="Calcular" BackgroundColor="Black" BorderRadius="20" TextColor="White" Margin=" 0,70,0,30"
                             Clicked="btnCalcular_Clicked"/>

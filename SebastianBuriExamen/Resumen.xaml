@@ -21,7 +21,9 @@
 
                 <StackLayout Grid.Row="1" Padding="30,20">
 
-                    
+                    <Label x:Name="lblName" />
+                    <Label x:Name="lblMontoInicial" />
+                    <Label x:Name="lblPagoMensual"/>
 
 
 

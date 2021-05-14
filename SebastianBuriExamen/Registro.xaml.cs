@@ -16,26 +16,38 @@ namespace SebastianBuriExamen
         {
             InitializeComponent();
 
-            lblUser.Text = usuario;
+            lblUser.Text = $"Usuario Conectado: {usuario}";
             
 
         }
 
-        private  void btnCalcular_Clicked(object sender, EventArgs e)
+        public  void btnCalcular_Clicked(object sender, EventArgs e)
         {
-            int costo=1800;
-            /*string nombre = txtNombre.Text;           
-            int monto = txtMonto.Text;
-            int pago = txtPago.Text;
-            
+            double costo=1800;
+            string nombre = txtNombre.Text;           
+            double monto = Convert.ToDouble(txtMonto.Text);
+            double total;
 
-            await Navigation.PushAsync(new Resumen(nombre, monto, pago));*/
+            total = (costo - monto) / 3;
+            double total2 = total + 90;
 
-
+            txtTotal.Text = total2.ToString();
+ 
         }
 
-        private void btnGuardar_Clicked(object sender, EventArgs e)
+        public  async void btnGuardar_Clicked(object sender, EventArgs e)
         {
+
+
+            string nombre = txtNombre.Text;
+            double monto = Convert.ToDouble(txtMonto.Text);
+
+            await DisplayAlert("Bien", "Elemento guardado con éxito", "Aceptar");
+            await Navigation.PushAsync(new Resumen(nombre));
+
+            
+
+            
 
         }
     }
